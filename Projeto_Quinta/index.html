@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Fome Zero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Realize seu Cadastro</h1>
+
+    <form id="cadastroForm" action="enviar.php" method="post"> <!-- Alterei o método para POST para segurança -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="email">Email:</label> <!-- Corrigi a capitalização para manter consistência -->
+        <input type="email" id="email" name="email" required>
+    
+        <label for="cnpj">CNPJ:</label> <!-- Corrigi a capitalização -->
+        <input type="text" id="cnpj" name="cnpj" required>
+    
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required>
+        
+        <label for="tipoTelefone">Tipo de Telefone:</label>
+        <select id="tipoTelefone" name="tipoTelefone">
+            <option value="pessoal">Pessoal</option>
+            <option value="corporativo">Corporativo</option>
+        </select>
+    
+        <label for="senha">Senha:</label> <!-- Corrigi a capitalização -->
+        <input type="password" id="senha" name="senha" required>
+    
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="3" cols="30"
+        placeholder="Conte sobre o ramo atuante"></textarea>
+        
+        <button type="submit">Enviar</button>
+        <div class="message" id="responseMessage"></div> <!-- Div para mensagens de resposta -->
+    </form>
+
+    <script src="script.js"></script> <!-- Corrigi a inclusão do script JavaScript -->
+</body>
+</html>
